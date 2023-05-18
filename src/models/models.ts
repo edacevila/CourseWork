@@ -38,8 +38,9 @@ const Performers = DataBase.define("performers", {
 
 const SpareParts = DataBase.define("spareparts", {
   id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
-  fullname: { type: DataTypes.STRING },
-  specialization: { type: DataTypes.STRING },
+  name: { type: DataTypes.STRING },
+  description: { type: DataTypes.STRING },
+  price: { type: DataTypes.INTEGER },
 });
 
 User.hasOne(Basket);
