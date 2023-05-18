@@ -35,8 +35,8 @@ class SparePartsCreate {
 
   async delete(req: Request, res: Response) {
     try {
-      const id = req.query;
-      await SpareParts.destroy({ where: { id: id.id } });
+      const id = req.query.id;
+      await SpareParts.destroy({ where: { id: id } });
       res.status(200).json({ messege: "модель удалена" });
     } catch (e) {
       res.status(400).json(e);
